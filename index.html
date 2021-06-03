@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Home</title>
+</head>
+
+<body>
+  <header>
+    <div class="header_label">
+      <h1>Hot Ait Hotell</h1>
+    </div>
+  </header>
+  <nav>
+    <div class="nav_container">
+      <div class="nav_item">
+        <a href="index.html" class="active">Home</a>
+      </div>
+      <div class="nav_item">
+        <a href="book.html">Book</a>
+      </div>
+      <div class="nav_item">
+        <a href="find.html">Find</a>
+      </div>
+      <div class="nav_item">
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <h1 class="center_label">Welcome to Hot Ait Hotell</h1>
+
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+      <!-- Full-width images with number and caption text -->
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="img/nanting.jpeg" alt="" style="width:100%">
+        <div class="text">Hotell lobby</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="img/nanting2.jpeg" alt="" style="width:100%">
+        <div class="text">Balcony View</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="img/nanting3.webp" alt="" style="width:100%">
+        <div class="text">Suite Room</div>
+      </div>
+
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      // Next/previous controls
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      // Thumbnail image controls
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1
+        }
+        if (n < 1) {
+          slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+    <div class="main_text">
+      <h3> What is Hot Ait Hotell?
+Do you like to enjoy your vacation at a five-star hotell?
+If so, the Hot Ait resort hotell is perfect for you!
+A place filled with happines, good vibes, sun and fun!
+Ready to live like a king or queen? We are ready to give you, your best experience at a hotell!
+
+       </h3>
+     </div>
+   </main>
+   <footer>
+    <p> Telephone:<a class="no-hover" href="tel:073-516-71-33"> 0735167133</a></p>
+    <p> E-post: <a class="no-hover" href="mailto:utbhashte@skola.malmo.se"> utbhashte@skola.malmo.se  </a></p>
+     <a target="_blank" href="https://www.malmocity.se/en/tourist-information/"> Malmöcity </a>
+</footer>
+</html>
